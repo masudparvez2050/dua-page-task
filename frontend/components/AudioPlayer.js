@@ -101,7 +101,6 @@ function AudioPlayer({ audioSrc }) {
   );
 }
 
-// Helper function to format time in minutes and seconds
 function formatTime(timeInSeconds) {
   const minutes = Math.floor(timeInSeconds / 60);
   const seconds = Math.floor(timeInSeconds % 60);

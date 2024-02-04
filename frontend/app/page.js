@@ -1,8 +1,10 @@
 import AudioPlayer from "@/components/AudioPlayer";
+import Categories from "@/components/Categories";
 import { getDua } from "@/utils/getDua";
 import { getCategory } from "@/utils/getcategory";
 import { getSubCategory } from "@/utils/getsubcategory";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Home() {
   const category = await getCategory();
@@ -14,125 +16,44 @@ export default async function Home() {
   const dua = await getDua();
   const duas = await dua.props.dua;
 
-  //console.log(categories);
-  let currentCategory = null;
+  //console.log(subcategories);
 
   return (
     <>
       {/* ---Start middle part--- */}
       <div className="col-span-12 xl:col-span-9 row-span-11 flex gap-4 xl:ml-[-30px] ">
-        {/* ---Stat Category----- */}
-        <div className="w-[28%] rounded-xl h-[86vh] border bg-white hidden md:block">
-          <div className="  rounded-t-lg bg-[#1fa45b] justify-center items-center h-14 flex flex-row px-5">
-            <p className="text-base text-white mx-auto">Categories</p>
-          </div>
-          <div className=" overflow-hidden">
-            <div className="mx-3 pt-4">
-              <label className="relative block w-full">
-                <span className="absolute inset-y-0 left-0 flex items-center pl-4">
-                  <Image
-                    src={"/assets/search-icon.svg"}
-                    width={22}
-                    height={22}
-                    alt="search-icon"
-                  />
-                </span>
-                <input
-                  id="filerted_catList"
-                  className="h-12 placeholder:text-mute-grey placeholder:text-sm border-[1px] block bg-white w-full rounded-md pl-12 shadow-sm focus:outline-none focus:border-[#1fa45b] focus:ring-[#1fa45b] focus:ring-1 sm:text-sm dark:bg-dark-bg-dark dark:border-none dark:placeholder:text-[#96a2b4]"
-                  placeholder="Search Categories"
-                  type="text"
-                  name="search"
-                  spellCheck="false"
-                  data-ms-editor="true"
-                />
-              </label>
-            </div>
-            <div className='h-[calc(100vh-32vh)]  3xl:h-[68vh]" scrl-cat pb-8 mb-4 overflow-y-scroll'>
-              <div>
-                {categories.map((category, i) => (
-                  <div key={i}>
-                    <div className="mt-4">
-                      <div className="group scroll-mt-4" id="cat_1">
-                        <a
-                          href={`/duas/${encodeURIComponent(
-                            category.cat_name_en
-                          )}?cat=${category.cat_id}`}
-                        >
-                          <div className="cursor-pointer bg-white flex justify-between items-center mx-3 dark:bg-transparent my-2 hover:bg-[#e8f0f5] hover:rounded-xl p-3 ">
-                            <div className="bg-icon-bg dark:bg-dark-bg-dark group-hover:bg-icon-bg dark:group-hover:bg-dark-bg-dark flex flex-row gap-x-4 items-center w-full h-18 px-3 rounded-xl group-hover:bg-icon-bg dark:group-hover:bg-dark-bg-dark">
-                              <div className="flex flex-row w-70 items-center xs:w-full sm:w-full md:w-full">
-                                <div className="bg-dua-bg dark:bg-dark-bg flex rounded-lg items-center h-14 w-14 xs:w-12 xs:h-12">
-                                  <Image
-                                    src={`/assets/icon/${category.cat_icon}.svg`}
-                                    alt="duar_gurutto"
-                                    className="p-3"
-                                    width={100}
-                                    height={100}
-                                  />
-                                </div>
-                                <div className="w-40 text-left ml-2">
-                                  <p className="text-base  text-slate-700 -cat dark:text-dark-text sm:text-mss">
-                                    {category.cat_name_en}
-                                  </p>
-                                  <p className="text-slate-500 text-xs mt-1 dark:text-dark-text xs:text-[11px]">
-                                    Subcategory: {category.no_of_subcat}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="flex flex-row w-12 items-center">
-                                <div className="bg-devider w-0.1 mr-3 h-12 dark:hidden" />
-                                <div className="flex flex-col gap-y-1 justify-center items-center">
-                                  <p className="text-base text-slate-500 dark:text-dark-text xs:text-sm sm:text-mss">
-                                    {category.no_of_dua}
-                                  </p>
-                                  <p className="text-slate-500 text-xs dark:text-dark-text xs:text-[11px]">
-                                    Duas
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                        <div className="ml-12 border-l-2 border-dotted my-2 border-[#1fa45b]">
-                          <div className="flex border-dotted flex-col justify-start items-start gap-y-2 ml-3">
-                            {/* ---Start sub category--- */}
-                            {subcategories &&
-                              subcategories
-                                .filter(
-                                  (subcategory) =>
-                                    subcategory.cat_id === category.cat_id
-                                )
-                                .map((subcategory, i) => (
-                                  <div key={i} className="flex flex-row my-2">
-                                    <div className="bg-[#1fa45b] -translate-x-4 mt-1.5 w-1.5 rounded-full h-1.5" />
-                                    <div className="flex flex-col justify-start items-start">
-                                      <a
-                                        href={`http://localhost:3000/duas/dua's-importance?cat=${category.cat_id}&subcat=${subcategory.subcat_id}`}
-                                      >
-                                        <p className="text-title cursor-pointer text-left text-sm dark:text-dark-text xs:text-2xs  text-slate-600 font-normal">
-                                          {subcategory.subcat_name_en}
-                                        </p>
-                                      </a>
-                                    </div>
-                                  </div>
-                                ))}
-                            {/* ---End sub category--- */}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* ---Start Category----- */}
+
+        <Categories
+          categories={categories}
+          subcategories={subcategories}
+          duas={duas}
+        />
         {/* ---End Category----- */}
 
         {/* ---Start body---- */}
 
         <div className="w-[98%] md:w-[72%] overflow-y-scroll ">
+          <div className="flex flex-row justify-between mb-5 px-5 py-4 bg-white rounded-2lg items-center cursor-pointer dark:bg-dark-bg md:hidden">
+            <p className="flex gap-x-2 style-Kalpurush text-title font-medium leading-[25px]  dark:text-dark-text text-mss ">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+              Dua's importance
+            </p>
+          </div>
+
           {subcategories &&
             subcategories.map((subcategory, i) => (
               <div key={i}>
@@ -155,7 +76,7 @@ export default async function Home() {
                   .map((dua, i) => (
                     <div
                       key={i}
-                      id={`dua_${dua.subcat_id}`}
+                      id={`dua_${dua.dua_id}`}
                       className=" bg-white rounded-[.625rem] border mb-5 dark:bg-dark-bg"
                     >
                       <div className="p-6">
@@ -247,7 +168,7 @@ export default async function Home() {
                         </div>
                       </div>
                       <div>
-                        <div className="flex flex-row items-center justify-between px-6">
+                        <div className="flex flex-col sm:flex-row items-center justify-between px-6">
                           <AudioPlayer audioSrc={dua.audio} />
                           <div className="flex items-center flex-row justify-between py-6 gap-x-8 xs:gap-x-6">
                             <div id="copy" className="relative w-6">

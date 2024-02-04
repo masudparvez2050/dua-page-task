@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,100 +25,137 @@ export default function RootLayout({ children }) {
               >
                 <div className="bg-white rounded-3xl px-4 dark:bg-dark-bg h-[95vh] scrl-left pb-16 border">
                   <div className="pt-7 mb-10 xl:mb-16 2xl:mb-16 3xl:mb-24 container ">
-                    <a href="/">
-                      <img
+                    <Link href="/">
+                      <Image
                         src="/assets/dua-logo.svg"
                         alt="dua-logo"
                         className="h-13 w-16 mx-auto drop-shadow-[#1fa45b] xl:mb-0 cursor-pointer"
+                        width={20}
+                        height={20}
                       />
-                    </a>
+                    </Link>
                   </div>
-                  <a href="/">
+                  <Link href="/">
                     <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
                       <div className=" w-1 rounded-tl-lg rounded-bl-lg " />
                       <div className="p-2 flex flex-row justify-center items-center">
-                        <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
-                          <img src="/assets/nav/home.svg" alt="/" />
+                        <div className=" bg-[#f7f8fa] dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
+                          <Image
+                            src="/assets/nav/home.svg"
+                            alt="/"
+                            width={20}
+                            height={20}
+                          />
                         </div>
                         <h2 className="text-mute-grey-200 dark:text-dark-text style-Kalpurush text-sm text-start group-hover:text-[#1fa45b] font-medium " />
                       </div>
                     </div>
-                  </a>
-                  <a href="/alldua">
+                  </Link>
+                  <Link href="/alldua">
                     <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
                       <div className=" w-1 rounded-tl-lg rounded-bl-lg " />
                       <div className="p-2 flex flex-row justify-center items-center">
-                        <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
-                          <img src="/assets/nav/alldua.svg" alt="/alldua" />
+                        <div className=" bg-[#f7f8fa] dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
+                          <Image
+                            src="/assets/nav/alldua.svg"
+                            alt="/alldua"
+                            width={20}
+                            height={20}
+                          />
                         </div>
                         <h2 className="text-mute-grey-200 dark:text-dark-text style-Kalpurush text-sm text-start group-hover:text-[#1fa45b] font-medium " />
                       </div>
                     </div>
-                  </a>
-                  <a href="/memorize">
+                  </Link>
+                  <Link href="/memorize">
                     <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
                       <div className=" w-1 rounded-tl-lg rounded-bl-lg " />
                       <div className="p-2 flex flex-row justify-center items-center">
-                        <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
-                          <img src="/assets/nav/memorize.svg" alt="/memorize" />
+                        <div className=" bg-[#f7f8fa] dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
+                          <Image
+                            src="/assets/nav/memorize.svg"
+                            alt="/memorize"
+                            width={20}
+                            height={20}
+                          />
                         </div>
                         <h2 className="text-mute-grey-200 dark:text-dark-text style-Kalpurush text-sm text-start group-hover:text-[#1fa45b] font-medium " />
                       </div>
                     </div>
-                  </a>
-                  <a href="/bookmark">
+                  </Link>
+                  <Link href="/bookmark">
                     <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
                       <div className=" w-1 rounded-tl-lg rounded-bl-lg " />
                       <div className="p-2 flex flex-row justify-center items-center">
-                        <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
-                          <img src="/assets/nav/bookmark.svg" alt="/bookmark" />
+                        <div className=" bg-[#f7f8fa] dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
+                          <Image
+                            src="/assets/nav/bookmark.svg"
+                            alt="/bookmark"
+                            width={20}
+                            height={20}
+                          />
                         </div>
                         <h2 className="text-mute-grey-200 dark:text-dark-text style-Kalpurush text-sm text-start group-hover:text-[#1fa45b] font-medium " />
                       </div>
                     </div>
-                  </a>
-                  <a href="/ruqyah">
+                  </Link>
+                  <Link href="/ruqyah">
                     <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
                       <div className=" w-1 rounded-tl-lg rounded-bl-lg " />
                       <div className="p-2 flex flex-row justify-center items-center">
-                        <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
-                          <img src="/assets/nav/ruqyah.svg" alt="/ruqyah" />
+                        <div className=" bg-[#f7f8fa] dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
+                          <Image
+                            src="/assets/nav/ruqyah.svg"
+                            alt="/ruqyah"
+                            width={20}
+                            height={20}
+                          />
                         </div>
                         <h2 className="text-mute-grey-200 dark:text-dark-text style-Kalpurush text-sm text-start group-hover:text-[#1fa45b] font-medium " />
                       </div>
                     </div>
-                  </a>
-                  <a href="/dua-info">
+                  </Link>
+                  <Link href="/dua-info">
                     <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
                       <div className=" w-1 rounded-tl-lg rounded-bl-lg " />
                       <div className="p-2 flex flex-row justify-center items-center">
-                        <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
-                          <img src="/assets/nav/dua-info.svg" alt="/dua-info" />
+                        <div className=" bg-[#f7f8fa] dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
+                          <Image
+                            src="/assets/nav/dua-info.svg"
+                            alt="/dua-info"
+                            width={20}
+                            height={20}
+                          />
                         </div>
                         <h2 className="text-mute-grey-200 dark:text-dark-text style-Kalpurush text-sm text-start group-hover:text-[#1fa45b] font-medium " />
                       </div>
                     </div>
-                  </a>
-                  <a href="/books">
+                  </Link>
+                  <Link href="/books">
                     <div className="justify-center items-center  cursor-pointer my-2 flex flex-row w-full rounded-lg group">
                       <div className=" w-1 rounded-tl-lg rounded-bl-lg " />
                       <div className="p-2 flex flex-row justify-center items-center">
-                        <div className=" bg-icon-bg dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
-                          <img src="/assets/nav/books.svg" alt="/books" />
+                        <div className=" bg-[#f7f8fa] dark:bg-dark-bg-dark flex p-2 rounded-full items-center h-10 w-10 justify-center">
+                          <Image
+                            src="/assets/nav/books.svg"
+                            alt="/books"
+                            width={20}
+                            height={20}
+                          />
                         </div>
                         <h2 className="text-mute-grey-200 dark:text-dark-text style-Kalpurush text-sm text-start group-hover:text-[#1fa45b] font-medium " />
                       </div>
                     </div>
-                  </a>
+                  </Link>
                   <div>
-                    <div className="pt-6 xl:pt-16 2xl:pt-16 3xl:pt-24 pb-2 text-center">
-                      <a href="/support">
+                    <div className="pt-6 xl:pt-16 2xl:pt-16 3xl:pt-24 pb-2 pl-2 text-center">
+                      <Link href="/support">
                         <button className="w-13 h-13 bg-[#1fa45b] drop-shadow-[#1fa45b] rounded-lg lg:mr-4 text-white text-sm">
                           <div className="flex justify-center items-center">
                             <p className="hidden">I Want To Support</p>{" "}
                             <svg
-                              width={24}
-                              height={24}
+                              width={50}
+                              height={50}
                               viewBox="0 0 24 24"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +173,7 @@ export default function RootLayout({ children }) {
                             </svg>
                           </div>
                         </button>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -144,14 +183,25 @@ export default function RootLayout({ children }) {
             {/* ---End Left-bar--- */}
 
             {/* ---Start Top-bar--- */}
-            <div className="col-span-11 col-start-2">
+            <div className="col-span-full md:col-span-11 md:col-start-2 bg-white rounded-2xl  md:bg-transparent md:rounded-none ">
               {" "}
               <div className=" flex items-center h-full">
-                <div className="w-5/6  flex justify-between h-full items-center">
-                  <p className="text-2xl">Dua Page</p>
-                  <div className="flex mr-16">
+                <div className="w-5/6 flex justify-between h-full items-center">
+                  <Link className="md:hidden" href="/">
+                    <Image
+                      src="/assets/dua-logo.svg"
+                      alt="dua-logo"
+                      className="h-12 w-12 md:hidden mx-auto drop-shadow-[#1fa45b] xl:mb-0 cursor-pointer"
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                  <p className="md:text-xl xl:text-2xl hidden md:block ">
+                    Dua Page
+                  </p>
+                  <div className="sm:flex mr-16 hidden ">
                     <input
-                      className=" border rounded-md mr-6 w-[350px] placeholder:text-mute-grey dark:placeholder:text-[#96a2b4] block placeholder: placeholder:text-sm bg-white  py-[0.75rem] px-4 shadow-sm focus:outline-none focus:border-[#1fa45b] focus:ring-[#1fa45b] focus:ring-1  sm:text-sm sm-max:dark:bg-dark-bg-lite md:dark:bg-dark-bg-dark dark:bg-dark-bg dark:placeholder:opacity-[.6] lg:dark:bg-dark-bg-dark "
+                      className=" border rounded-md mr-6  sm:w-[250px] md:w-[350px] placeholder:text-mute-grey dark:placeholder:text-[#96a2b4] block placeholder: placeholder:text-sm bg-white  py-[0.75rem] px-4 shadow-sm focus:outline-none focus:border-[#1fa45b] focus:ring-[#1fa45b] focus:ring-1  sm:text-sm sm-max:dark:bg-dark-bg-lite md:dark:bg-dark-bg-dark dark:bg-dark-bg dark:placeholder:opacity-[.6] lg:dark:bg-dark-bg-dark "
                       type="text"
                       placeholder="Search by Dua Name"
                     />
@@ -169,7 +219,12 @@ export default function RootLayout({ children }) {
                 <div className="w-1/6 ">
                   <div className="flex justify-end items-center gap-4">
                     {" "}
-                    <img src="/assets/settings/profile.svg" alt="profile" />
+                    <Image
+                      src="/assets/settings/profile.svg"
+                      alt="profile"
+                      width={45}
+                      height={45}
+                    />
                     <svg
                       className="ml-2 mr-2"
                       width={10}
@@ -183,10 +238,12 @@ export default function RootLayout({ children }) {
                         fill="#868686"
                       />
                     </svg>
-                    <img
+                    <Image
                       src="/assets/tab/home/settings.svg"
                       className="xl: hidden"
                       alt="settings"
+                      width={20}
+                      height={20}
                     />
                   </div>
                 </div>
@@ -195,7 +252,41 @@ export default function RootLayout({ children }) {
             {/* ---End Top-bar--- */}
 
             {/* ------  Middle part----- */}
+
             {children}
+
+            {/* ---Start Bottom Menu--- */}
+            <div className="fixed bottom-0 z-0 w-full bg-white pb-6 mt-6 rounded-t-[3rem] shadow-top dark:bg-dark-bg  xl:hidden">
+              <div className="px-6 pt-6 flex justify-between">
+                <a href="/">
+                  <div className="w-10 h-10 bg-dua-bg flex items-center justify-center rounded-full cursor-pointer dark:bg-dark-bg-dark">
+                    <img src="/assets/nav/home.svg" alt="/" />
+                  </div>
+                </a>
+                <a href="/alldua">
+                  <div className="w-10 h-10 bg-dua-bg flex items-center justify-center rounded-full cursor-pointer dark:bg-dark-bg-dark">
+                    <img src="/assets/nav/alldua.svg" alt="/alldua" />
+                  </div>
+                </a>
+                <a href="/memorize">
+                  <div className="w-10 h-10 bg-dua-bg flex items-center justify-center rounded-full cursor-pointer dark:bg-dark-bg-dark">
+                    <img src="/assets/nav/memorize.svg" alt="/memorize" />
+                  </div>
+                </a>
+                <a href="/bookmark">
+                  <div className="w-10 h-10 bg-dua-bg flex items-center justify-center rounded-full cursor-pointer dark:bg-dark-bg-dark">
+                    <img src="/assets/nav/bookmark.svg" alt="/bookmark" />
+                  </div>
+                </a>
+                <a href="/ruqyah">
+                  <div className="w-10 h-10 bg-dua-bg flex items-center justify-center rounded-full cursor-pointer dark:bg-dark-bg-dark">
+                    <img src="/assets/nav/ruqyah.svg" alt="/ruqyah" />
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            {/* ---End Bottom Menu--- */}
 
             {/* ---start Right-bar--- */}
             <div className="col-span-2 row-span-11 h-[86vh] hidden xl:block  col-start-11 rounded-3xl bg-white border">
@@ -208,7 +299,7 @@ export default function RootLayout({ children }) {
                         <div className="bg-dua-bg flex flex-row w-full rounded-lg dark:bg-dark-bg-dark">
                           <div className=" w-1 rounded-tl-lg rounded-bl-lg" />
                           <div className="p-2 flex flex-row items-center w-full">
-                            <div className="bg-icon-bg flex p-2 items-center rounded-full mr-5 justify-center dark:bg-dark-bg ">
+                            <div className="bg-[#f7f8fa] flex p-2 items-center rounded-full mr-5 justify-center dark:bg-dark-bg ">
                               <img
                                 src="/assets/sidebar/language.svg "
                                 alt="language"
@@ -228,7 +319,7 @@ export default function RootLayout({ children }) {
                         <div className="bg-dua-bg flex flex-row w-full rounded-lg dark:bg-dark-bg-dark">
                           <div className=" w-1 rounded-tl-lg rounded-bl-lg" />
                           <div className="p-2 flex flex-row items-center w-full">
-                            <div className="bg-icon-bg flex p-2 items-center rounded-full mr-5 justify-center dark:bg-dark-bg ">
+                            <div className="bg-[#f7f8fa] flex p-2 items-center rounded-full mr-5 justify-center dark:bg-dark-bg ">
                               <img
                                 src="/assets/sidebar/general.svg "
                                 alt="general"
@@ -248,7 +339,7 @@ export default function RootLayout({ children }) {
                         <div className="bg-dua-bg flex flex-row w-full rounded-lg dark:bg-dark-bg-dark">
                           <div className=" w-1 rounded-tl-lg rounded-bl-lg" />
                           <div className="p-2 flex flex-row items-center w-full">
-                            <div className="bg-icon-bg flex p-2 items-center rounded-full mr-5 justify-center dark:bg-dark-bg ">
+                            <div className="bg-[#f7f8fa] flex p-2 items-center rounded-full mr-5 justify-center dark:bg-dark-bg ">
                               <img src="/assets/sidebar/font.svg " alt="font" />
                             </div>
                             <p className="text-mute-grey-200 dark:text-dark-text  text-start text-base leading-5 xs:text-sm lg-min:text-sm style-Kalpurush">
@@ -265,7 +356,7 @@ export default function RootLayout({ children }) {
                         <div className="dark:bg-dark-bg-lite transition duration-300 delay-[10ms] bg-dua-bg flex flex-row w-full rounded-lg">
                           <div className="bg-[#1fa45b] w-1 rounded-tl-lg rounded-bl-lg" />
                           <div className="p-2 flex flex-row items-center w-full">
-                            <div className="bg-icon-bg flex p-2 items-center rounded-full mr-5 justify-center dark:bg-dark-bg ">
+                            <div className="bg-[#f7f8fa] flex p-2 items-center rounded-full mr-5 justify-center dark:bg-dark-bg ">
                               <img
                                 src="/assets/sidebar/color/font.svg "
                                 alt="font"
