@@ -179,7 +179,7 @@ export default function Categories({ categories, subcategories, duas }) {
                                                   width={20}
                                                   height={20}
                                                 />
-                                                <p className=" text-xs my-3 text-left w-[95%] text-slate-600 dark:text-gray-300">
+                                                <p className=" text-xs my-3 text-left w-[95%] text-slate-400 ">
                                                   {dua.dua_name_en}
                                                 </p>
                                               </div>

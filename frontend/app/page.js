@@ -98,14 +98,14 @@ export default async function Home() {
                         <div className="flex flex-col justify-start items-start">
                           <div className="w-full">
                             <p
-                              className="  dark:text-[#e4e4e4] mt-5 text-justify leading-8 font-normal text-[#383838]"
+                              className="  mt-5 text-justify leading-8 font-normal text-[#383838]"
                               style={{ fontSize: 18 }}
                             >
                               <span>{dua.top_en}</span>
                             </p>
                             <p
                               dir="rtl"
-                              className="dark:text-[#e4e4e4] my-8 text-right leading-loose text-6xl"
+                              className="text-[#383838] my-8 text-right leading-loose text-6xl"
                               style={{
                                 wordSpacing: 8,
                                 fontSize: 30,
@@ -118,7 +118,7 @@ export default async function Home() {
                             <p />
                             {dua.transliteration_en ? (
                               <p
-                                className="  dark:text-[#e4e4e4] my-5 text-justify leading-8 italic text-[#383838]"
+                                className=" my-5 text-justify leading-8 italic text-[#383838]"
                                 style={{ fontSize: 18 }}
                               >
                                 <span
@@ -136,7 +136,7 @@ export default async function Home() {
                             {dua.translation_en ? (
                               <p
                                 id="translation"
-                                className="dark:text-[#e4e4e4] my-5 text-title text-justify font-normal text-[#383838]"
+                                className=" my-5 text-title text-justify font-normal text-[#383838]"
                                 style={{ fontSize: 18 }}
                               >
                                 <span
